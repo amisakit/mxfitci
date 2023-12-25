@@ -22,6 +22,7 @@ for f in $(\ls [34]*.sh); do sed -i 's;^MMFITDIR=~/.*$;MMFITDIR=${MXDIR}/src;' $
 
 sed -i 's;^DATADIR=/vol/.*;DATADIR=${MXDIR}/data/cyp2/perchain;' 382group.sh
 sed -i 's;^DATADIR=/vol/.*;DATADIR=${MXDIR}/data/abl/perchain;' 411ablgroup.sh
+sed -i 's;^DATADIR=/vol/.*;DATADIR=${MXDIR}/data/cam/perchain;' 612camgrpc145nx1.sh
 
-for f in $(\ls [34]*.sh); do sed -i 's;/vol/3/mmfit2022;${MXDIR};' $f; done
+for f in $(\ls [346]*.sh); do sed -i 's;/vol/3/mmfit2022;${MXDIR};' $f; done
 

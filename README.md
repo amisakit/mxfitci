@@ -13,7 +13,7 @@ on macOS 13.6/clang 15.0.0/R 4.1.2.
 
 `MXDIR` refers to the top directory of the repository.
 ```bash
-MXDIR=path/to/somewhre
+MXDIR=path/to/somewhere
 ```
 Go to the src directory, and make.
 ```
@@ -21,9 +21,10 @@ cd $MXDIR/src
 make
 ```
 
+In the subsequent code examples, datasets in the directory `$MXDIR/data/` are used.
+In these examples, it is assumed that the code is executed in a separate directory `$MXDIR/tests/` rather than `$MXDIR/data/` to keep `$MXDIR/data/` clean.
 
 # Example Usage
-
 
 ## markpdb
 
@@ -99,7 +100,7 @@ The meanings of the options provided for `mmfit` are as follows:
 
 ## `msfit`
 
-To calculate the anisotropic covariance matrix using the previously created file `hmth1a.pdbm`, execute the following commands:
+To calculate the anisotropic covariance matrix using the [previously created file `hmth1a.pdbm`](#msfit), execute the following commands:
 ```
 cd $MXDIR/tests/single
 $MXDIR/src/msfit -v d -o c fitted.pdb -o s cov.txt -b o out.bin hmth1a.pdbm
@@ -222,13 +223,12 @@ close(con)
 
 # Applications to X-ray structures
 
-
 ## Class A $\beta$-lactamases
 
 Data
 
  - $MXDIR/data/abl.tar.xz: PDB files used in the study of the paper
- - $MXDIR/dataresid-abl.txt: aligned sequences and residue numbering
+ - $MXDIR/data/resid-abl.txt: aligned sequences and residue numbering
 
 A sample code for estimating covariance matrices
 
@@ -263,7 +263,7 @@ $MXDIR/src/msfit -v d -o c _tmp1 -o s spe-cov.dat -b o out.bin ../pooled.pdbm | 
 Data
  
  - $MXDIR/data/cyp2.tar.xz: PDB files used in the study of the paper
- - $MXDIR/dataresid-cyp2.txt: aligned sequences and residue numbering
+ - $MXDIR/data/resid-cyp2.txt: aligned sequences and residue numbering
  
 A sample code for estimating covariance matrices.
 ```bash
@@ -347,6 +347,7 @@ Data (in the `data/` directory):
  - `numtests.tar.xz`
  - `abl.tar.xz`
  - `cyp2.tar.xz`
+ - `cam.tar.xz` & grouping-cam.txt (a calmodulin example)
 
 Raw Bash/R scripts (in the `scripts/` directory)
 
