@@ -364,3 +364,5 @@ All calculations were carried out on Debian in this study.
 
 
 # Citing
+
+Takashi Amisaki, Multilevel superposition for deciphering the conformational variability of protein ensembles, *Briefings in Bioinformatics*, Volume 25, Issue 3, May 2024, bbae137, https://doi.org/10.1093/bib/bbae137
